@@ -1,0 +1,18 @@
+[tool.ruff]
+exclude = [
+    ".git",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".pyenv",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "dist",
+    "venv",
+]
+
+[tool.pytest]
+exclude = [".venv"]
