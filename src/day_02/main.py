@@ -16,7 +16,7 @@ def main() -> None:
         reports.append(report)
 
     print(f"part1: {count_safe_reports(reports)}")
-    print(f"part1: {count_safe_reports(reports, tolerance=1)}")
+    print(f"part2: {count_safe_reports(reports, tolerance=1)}")
 
 
 def count_safe_reports(
