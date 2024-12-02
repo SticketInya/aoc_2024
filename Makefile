@@ -20,6 +20,11 @@ help:
 d1:
 	@python3 src/day_01/main.py
 
+## d2: run the second days challange
+.PHONY: d2
+d2:
+	@python3 src/day_02/main.py
+
 
 ## test: run the tests
 .PHONY: test
