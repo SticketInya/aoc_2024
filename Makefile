@@ -15,18 +15,16 @@ help:
 # Days
 # ==================================================================================== #
 
-## d1: run the first days challange
-.PHONY: d1
-d1:
-	@python3 src/day_01/main.py
+## run: run the nth days challange. Pass variable day=01 to run the first, day=02 to run the second and so on.
+.PHONY: run
+run:
+	@python3 src/day_$(shell printf "%02d" $(day))/main.py
 
-## d2: run the second days challange
-.PHONY: d2
-d2:
-	@python3 src/day_02/main.py
-
-
-## test: run the tests
+## test: run the tests. Pass variable day=01 to run tests for a specific day, otherwise runs all tests.
 .PHONY: test
 test:
+ifdef day
+	@pytest src/day_$(shell printf "%02d" $(day))/
+else
 	@pytest
+endif
